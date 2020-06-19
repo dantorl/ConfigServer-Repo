@@ -1,0 +1,16 @@
+server:
+  port: 9000
+
+zuul:
+  routes:
+    cliente:
+      path: /cliente/**
+      serviceId: cliente
+      stripPrefix: false
+    cartao:
+      path: /cartao/**
+      serviceId: cartao
+      stripPrefix: false
+    cep:
+      path: /cep/**
+      url: https://viacep.com.br/ws/
